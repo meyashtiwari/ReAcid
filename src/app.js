@@ -101,7 +101,10 @@ App = {
         // Create the html for the task
         const $newRecordTemplate = $RecordTemplate.clone()
         $newRecordTemplate.find('.name').html(name)
+        $newRecordTemplate.find('.phoneNo').html(phone)
+        $newRecordTemplate.find('.typeOfAcid').html(typeofacid)
         // Show the task
+        $('#recordList').append($newRecordTemplate)
         $newRecordTemplate.show()
       }
     },

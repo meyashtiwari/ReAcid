@@ -22,23 +22,16 @@
         margin-top: 60px;
       }
 
-      #content {
-        display: none;
-      }
-
       form {
         width: 350px;
         margin-bottom: 10px;
       }
-
-      ul {
-        margin-bottom: 0px;
-      }
-
-      #completedTaskList .content {
-        color: grey;
-        text-decoration: line-through;
-      }
+    .trElementEmulation li {
+    list-style:none;
+    float:left;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    }
     </style>
   </head>
   <body>
@@ -56,23 +49,26 @@
           <div id="loader" class="text-center">
             <p class="text-center">Loading...</p>
           </div>
-          <div id="content">
+          <div></div>
             <form onSubmit="App.createRecord(); return false;">
               <input id="name" type="text" class="form-control" placeholder="Add Name of the person" required>
               <input id="phoneNo" type="text" class="form-control" placeholder="Phone Number" required>
               <input id="typeOfAcid" type="text" class="form-control" placeholder="Type of Acid" required>
               <input type="submit" hidden="">
             </form>
-            <ul id="recordList" class="list-unstyled">
-              <div class="RecordTemplate" class="checkbox" style="display: none">
-                <label>
-                  <input type="checkbox" />
-                  <span class="name">Task content goes here...</span>
-                </label>
+            <div style="align-self: center;">
+            <ul id="recordList">
+              <div class="RecordTemplate list-group" style="display: none">
+                <li class="list-group-item list-group-item-action flex-column align-items-start active">
+                <div class="d-flex w-100 justify-content-between">
+                  <h6 class="name mb-1"></h6>
+                  <small class="typeOfAcid"></small>
+                </div>
+                <p class="phoneNo mb-1"></p>
+                </li>
               </div>
             </ul>
-            <ul id="completedTaskList" class="list-unstyled">
-            </ul>
+        </div>
           </div>
         </main>
       </div>
