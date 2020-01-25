@@ -8,8 +8,7 @@ App = {
       await App.loadContract()
       await App.render()
     },
-  
-    // https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8
+
     loadWeb3: async () => {
       if (typeof web3 !== 'undefined') {
         App.web3Provider = web3.currentProvider
@@ -50,11 +49,11 @@ App = {
     loadContract: async () => {
       // Create a JavaScript version of the smart contract
       const ReAcid = await $.getJSON('ReAcid.json')
-      App.contracts.ReAcid = TruffleContract(reAcid)
+      App.contracts.ReAcid = TruffleContract(ReAcid)
       App.contracts.ReAcid.setProvider(App.web3Provider)
   
       // Hydrate the smart contract with values from the blockchain
-      App.todoList = await App.contracts.TodoList.deployed()
+      App.ReAcid = await App.contracts.ReAcid.deployed()
     },
   
     render: async () => {
@@ -78,16 +77,17 @@ App = {
   
     renderTasks: async () => {
       // Load the total task count from the blockchain
-      const recordCount = await App.todoList.recordCount()
+      const recordCount = await App.ReAcid.recordCount()
       const $taskTemplate = $('.taskTemplate')
   
       // Render out each task with a new task template
-      for (var i = 1; i <= taskCount; i++) {
+      for (var i = 1; i <= recordCount; i++) {
         // Fetch the task data from the blockchain
-        const task = await App.todoList.tasks(i)
-        const taskId = task[0].toNumber()
-        const taskContent = task[1]
-        const taskCompleted = task[2]
+        const record = await App.ReAcid.records(i)
+        const recordId = record[0].toNumber()
+        const name = record[1]
+        const phone = record[2]
+        const typeofacid = record[3]
   
         // Create the html for the task
         const $newTaskTemplate = $taskTemplate.clone()
