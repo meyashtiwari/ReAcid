@@ -53,7 +53,7 @@ App = {
       App.contracts.ReAcid.setProvider(App.web3Provider)
   
       // Hydrate the smart contract with values from the blockchain
-      App.ReAcid = await App.contracts.ReAcid.deployed()
+      App.reAcid = await App.contracts.ReAcid.deployed()
     },
   
     render: async () => {
@@ -74,38 +74,35 @@ App = {
       // Update loading state
       App.setLoading(false)
     },
+
+    createRecord: async () => {
+        App.setLoading(true)
+        const name = $('#name').val()
+        const phoneNo = $('#phoneNo').val()
+        const typeOfAcid = $('#typeOfAcid').val()
+        await App.reAcid.createRecord(name, phoneNo, typeOfAcid)
+        window.location.reload()
+    },
   
     renderTasks: async () => {
       // Load the total task count from the blockchain
-      const recordCount = await App.ReAcid.recordCount()
-      const $taskTemplate = $('.taskTemplate')
+      const recordCount = await App.reAcid.recordCount()
+      const $RecordTemplate = $('.RecordTemplate')
   
       // Render out each task with a new task template
       for (var i = 1; i <= recordCount; i++) {
         // Fetch the task data from the blockchain
-        const record = await App.ReAcid.records(i)
+        const record = await App.reAcid.records(i)
         const recordId = record[0].toNumber()
         const name = record[1]
         const phone = record[2]
         const typeofacid = record[3]
   
         // Create the html for the task
-        const $newTaskTemplate = $taskTemplate.clone()
-        $newTaskTemplate.find('.content').html(taskContent)
-        $newTaskTemplate.find('input')
-                        .prop('name', taskId)
-                        .prop('checked', taskCompleted)
-                        // .on('click', App.toggleCompleted)
-  
-        // Put the task in the correct list
-        if (taskCompleted) {
-          $('#completedTaskList').append($newTaskTemplate)
-        } else {
-          $('#taskList').append($newTaskTemplate)
-        }
-  
+        const $newRecordTemplate = $RecordTemplate.clone()
+        $newRecordTemplate.find('.name').html(name)
         // Show the task
-        $newTaskTemplate.show()
+        $newRecordTemplate.show()
       }
     },
   

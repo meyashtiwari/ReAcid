@@ -11,11 +11,20 @@ contract ReAcid {
         string typeOfAcid;
     }
 
+    event RecordAdded (
+
+        uint id,
+        string name,
+        string phoneNumber,
+        string typeOfAcid
+    );
+
     mapping(uint => Record) public records;
 
     function createRecord(string memory _name, string memory _phoneNumber, string memory _typeOfAcid) public {
         recordCount++;
         records[recordCount] = Record(recordCount, _name, _phoneNumber, _typeOfAcid);
+        emit RecordAdded(recordCount, _name, _phoneNumber, _typeOfAcid);
     }
 
     constructor() public {
