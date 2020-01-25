@@ -1,0 +1,1484 @@
+{
+  "contractName": "AddRecord",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "records",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "phoneNumber",
+          "type": "string"
+        },
+        {
+          "name": "typeOfAcid",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x34461067"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recordCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x900407bc"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_phoneNumber",
+          "type": "string"
+        },
+        {
+          "name": "_typeOfAcid",
+          "type": "string"
+        }
+      ],
+      "name": "createRecord",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xfacff5d2"
+    }
+  ],
+  "bytecode": "0x60806040526000805534801561001457600080fd5b506100ce6040805190810160405280600481526020017f59617368000000000000000000000000000000000000000000000000000000008152506040805190810160405280600a81526020017f38393230393538323738000000000000000000000000000000000000000000008152506040805190810160405280600581526020017f4832534f340000000000000000000000000000000000000000000000000000008152506100d3640100000000026401000000009004565b610202565b60008054600190810180835560408051608081018252828152602080820189815282840189905260608301889052938652848152919094208451815591518051929361012793908501929190910190610167565b5060408201518051610143916002840191602090910190610167565b506060820151805161015f916003840191602090910190610167565b505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101a857805160ff19168380011785556101d5565b828001600101855582156101d5579182015b828111156101d55782518255916020019190600101906101ba565b506101e19291506101e5565b5090565b6101ff91905b808211156101e157600081556001016101eb565b90565b6106e3806102116000396000f3fe6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166334461067811461005b578063900407bc146101d0578063facff5d2146101f7575b600080fd5b34801561006757600080fd5b506100856004803603602081101561007e57600080fd5b50356103ba565b60405180858152602001806020018060200180602001848103845287818151815260200191508051906020019080838360005b838110156100d05781810151838201526020016100b8565b50505050905090810190601f1680156100fd5780820380516001836020036101000a031916815260200191505b50848103835286518152865160209182019188019080838360005b83811015610130578181015183820152602001610118565b50505050905090810190601f16801561015d5780820380516001836020036101000a031916815260200191505b50848103825285518152855160209182019187019080838360005b83811015610190578181015183820152602001610178565b50505050905090810190601f1680156101bd5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b3480156101dc57600080fd5b506101e5610582565b60408051918252519081900360200190f35b34801561020357600080fd5b506103b86004803603606081101561021a57600080fd5b81019060208101813564010000000081111561023557600080fd5b82018360208201111561024757600080fd5b8035906020019184600183028401116401000000008311171561026957600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092959493602081019350359150506401000000008111156102bc57600080fd5b8201836020820111156102ce57600080fd5b803590602001918460018302840111640100000000831117156102f057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929594936020810193503591505064010000000081111561034357600080fd5b82018360208201111561035557600080fd5b8035906020019184600183028401116401000000008311171561037757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610588945050505050565b005b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156104565780601f1061042b57610100808354040283529160200191610456565b820191906000526020600020905b81548152906001019060200180831161043957829003601f168201915b50505060028085018054604080516020601f60001961010060018716150201909416959095049283018590048502810185019091528181529596959450909250908301828280156104e85780601f106104bd576101008083540402835291602001916104e8565b820191906000526020600020905b8154815290600101906020018083116104cb57829003601f168201915b5050505060038301805460408051602060026001851615610100026000190190941693909304601f81018490048402820184019092528181529495949350908301828280156105785780601f1061054d57610100808354040283529160200191610578565b820191906000526020600020905b81548152906001019060200180831161055b57829003601f168201915b5050505050905084565b60005481565b6000805460019081018083556040805160808101825282815260208082018981528284018990526060830188905293865284815291909420845181559151805192936105dc9390850192919091019061061c565b50604082015180516105f891600284019160209091019061061c565b506060820151805161061491600384019160209091019061061c565b505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061065d57805160ff191683800117855561068a565b8280016001018555821561068a579182015b8281111561068a57825182559160200191906001019061066f565b5061069692915061069a565b5090565b6106b491905b8082111561069657600081556001016106a0565b9056fea165627a7a7230582033c072c645a0045d9ca76f486a6e657e9c9fe28816ff08fa3e73c79862ed55020029",
+  "deployedBytecode": "0x6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166334461067811461005b578063900407bc146101d0578063facff5d2146101f7575b600080fd5b34801561006757600080fd5b506100856004803603602081101561007e57600080fd5b50356103ba565b60405180858152602001806020018060200180602001848103845287818151815260200191508051906020019080838360005b838110156100d05781810151838201526020016100b8565b50505050905090810190601f1680156100fd5780820380516001836020036101000a031916815260200191505b50848103835286518152865160209182019188019080838360005b83811015610130578181015183820152602001610118565b50505050905090810190601f16801561015d5780820380516001836020036101000a031916815260200191505b50848103825285518152855160209182019187019080838360005b83811015610190578181015183820152602001610178565b50505050905090810190601f1680156101bd5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b3480156101dc57600080fd5b506101e5610582565b60408051918252519081900360200190f35b34801561020357600080fd5b506103b86004803603606081101561021a57600080fd5b81019060208101813564010000000081111561023557600080fd5b82018360208201111561024757600080fd5b8035906020019184600183028401116401000000008311171561026957600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092959493602081019350359150506401000000008111156102bc57600080fd5b8201836020820111156102ce57600080fd5b803590602001918460018302840111640100000000831117156102f057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929594936020810193503591505064010000000081111561034357600080fd5b82018360208201111561035557600080fd5b8035906020019184600183028401116401000000008311171561037757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610588945050505050565b005b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156104565780601f1061042b57610100808354040283529160200191610456565b820191906000526020600020905b81548152906001019060200180831161043957829003601f168201915b50505060028085018054604080516020601f60001961010060018716150201909416959095049283018590048502810185019091528181529596959450909250908301828280156104e85780601f106104bd576101008083540402835291602001916104e8565b820191906000526020600020905b8154815290600101906020018083116104cb57829003601f168201915b5050505060038301805460408051602060026001851615610100026000190190941693909304601f81018490048402820184019092528181529495949350908301828280156105785780601f1061054d57610100808354040283529160200191610578565b820191906000526020600020905b81548152906001019060200180831161055b57829003601f168201915b5050505050905084565b60005481565b6000805460019081018083556040805160808101825282815260208082018981528284018990526060830188905293865284815291909420845181559151805192936105dc9390850192919091019061061c565b50604082015180516105f891600284019160209091019061061c565b506060820151805161061491600384019160209091019061061c565b505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061065d57805160ff191683800117855561068a565b8280016001018555821561068a579182015b8281111561068a57825182559160200191906001019061066f565b5061069692915061069a565b5090565b6106b491905b8082111561069657600081556001016106a0565b9056fea165627a7a7230582033c072c645a0045d9ca76f486a6e657e9c9fe28816ff08fa3e73c79862ed55020029",
+  "sourceMap": "27:558:0:-;;;79:1;53:27;;497:85;8:9:-1;5:2;;;30:1;27;20:12;5:2;497:85:0;531:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:12;;;:43;;;:::i;:::-;27:558;;265:224;381:11;:13;;;;;;;;;428:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;405:20;;;;;;;;;;:76;;;;;;;;:20;;:76;;;;;;;;;;;;:::i;:::-;-1:-1:-1;405:76:0;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;405:76:0;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;;265:224:0:o;27:558::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;27:558:0;;;-1:-1:-1;27:558:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "27:558:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;218:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;218:38:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:38:0;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:38:0;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;53:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:27:0;;;;;;;;;;;;;;;;;;;;265:224;;8:9:-1;5:2;;;30:1;27;20:12;5:2;265:224:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;265:224:0;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;265:224:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;265:224:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;265:224:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;265:224:0;;;;;;;;-1:-1:-1;265:224:0;;-1:-1:-1;;21:11;5:28;;2:2;;;46:1;43;36:12;2:2;265:224:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;265:224:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;265:224:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;265:224:0;;;;;;;;-1:-1:-1;265:224:0;;-1:-1:-1;;21:11;5:28;;2:2;;;46:1;43;36:12;2:2;265:224:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;265:224:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;265:224:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;265:224:0;;-1:-1:-1;265:224:0;;-1:-1:-1;;;;;265:224:0;;;218:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;218:38:0;;;;;;;;;;;-1:-1:-1;;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:38:0;;-1:-1:-1;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;218:38:0;;;;;;;;;;;;;;;;-1:-1:-1;;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;53:27::-;;;;:::o;265:224::-;381:11;:13;;;;;;;;;428:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;405:20;;;;;;;;;;:76;;;;;;;;:20;;:76;;;;;;;;;;;;:::i;:::-;-1:-1:-1;405:76:0;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;405:76:0;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;;265:224:0:o;27:558::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;27:558:0;;;-1:-1:-1;27:558:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract AddRecord {\r\n    uint public recordCount = 0;\r\n\r\n    struct Record {\r\n\r\n        uint id;\r\n        string name;\r\n        string phoneNumber;\r\n        string typeOfAcid;\r\n    }\r\n\r\n    mapping(uint => Record) public records;\r\n\r\n    function createRecord(string memory _name, string memory _phoneNumber, string memory _typeOfAcid) public {\r\n        recordCount++;\r\n        records[recordCount] = Record(recordCount, _name, _phoneNumber, _typeOfAcid);\r\n    }\r\n\r\n    constructor() public {\r\n\r\n        createRecord(\"Yash\", \"8920958278\", \"H2SO4\");\r\n    }\r\n}",
+  "sourcePath": "C:/Users/yash/Documents/ReAcid2/contracts/AddRecord.sol",
+  "ast": {
+    "absolutePath": "/C/Users/yash/Documents/ReAcid2/contracts/AddRecord.sol",
+    "exportedSymbols": {
+      "AddRecord": [
+        52
+      ]
+    },
+    "id": 53,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 52,
+        "linearizedBaseContracts": [
+          52
+        ],
+        "name": "AddRecord",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "recordCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 52,
+            "src": "53:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "53:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "79:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "AddRecord.Record",
+            "id": 13,
+            "members": [
+              {
+                "constant": false,
+                "id": 6,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "116:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "116:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 8,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "134:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "134:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "phoneNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "156:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "156:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "typeOfAcid",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "185:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "185:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Record",
+            "nodeType": "StructDefinition",
+            "scope": 52,
+            "src": "89:121:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17,
+            "name": "records",
+            "nodeType": "VariableDeclaration",
+            "scope": 52,
+            "src": "218:38:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Record_$13_storage_$",
+              "typeString": "mapping(uint256 => struct AddRecord.Record)"
+            },
+            "typeName": {
+              "id": 16,
+              "keyType": {
+                "id": 14,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "226:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "218:23:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Record_$13_storage_$",
+                "typeString": "mapping(uint256 => struct AddRecord.Record)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 15,
+                "name": "Record",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 13,
+                "src": "234:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Record_$13_storage_ptr",
+                  "typeString": "struct AddRecord.Record"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "370:119:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "381:13:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 26,
+                      "name": "recordCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "381:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "381:13:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 29,
+                        "name": "records",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "405:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Record_$13_storage_$",
+                          "typeString": "mapping(uint256 => struct AddRecord.Record storage ref)"
+                        }
+                      },
+                      "id": 31,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 30,
+                        "name": "recordCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "413:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "405:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Record_$13_storage",
+                        "typeString": "struct AddRecord.Record storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 33,
+                          "name": "recordCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4,
+                          "src": "435:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 34,
+                          "name": "_name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 19,
+                          "src": "448:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 35,
+                          "name": "_phoneNumber",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "455:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 36,
+                          "name": "_typeOfAcid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 23,
+                          "src": "469:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 32,
+                        "name": "Record",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "428:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Record_$13_storage_ptr_$",
+                          "typeString": "type(struct AddRecord.Record storage pointer)"
+                        }
+                      },
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "428:53:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Record_$13_memory",
+                        "typeString": "struct AddRecord.Record memory"
+                      }
+                    },
+                    "src": "405:76:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Record_$13_storage",
+                      "typeString": "struct AddRecord.Record storage ref"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "405:76:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 41,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createRecord",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "287:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "_phoneNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "308:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "name": "_typeOfAcid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "336:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:76:0"
+            },
+            "returnParameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "370:0:0"
+            },
+            "scope": 52,
+            "src": "265:224:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 50,
+              "nodeType": "Block",
+              "src": "518:64:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "59617368",
+                        "id": 45,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "544:6:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_789ae3b91d0bd926557e33c124fc251d0b2fc46ddfd95cdc5e41a026dd1abba0",
+                          "typeString": "literal_string \"Yash\""
+                        },
+                        "value": "Yash"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "38393230393538323738",
+                        "id": 46,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "552:12:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9c551956ead7475f261dab898a6733eb51b8cdb3742cfed581cee8825fd67ba2",
+                          "typeString": "literal_string \"8920958278\""
+                        },
+                        "value": "8920958278"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4832534f34",
+                        "id": 47,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "566:7:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_30499df5168e9b895742a50f8a15ef04798616f6be939f8ddcd105e83da76f69",
+                          "typeString": "literal_string \"H2SO4\""
+                        },
+                        "value": "H2SO4"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_789ae3b91d0bd926557e33c124fc251d0b2fc46ddfd95cdc5e41a026dd1abba0",
+                          "typeString": "literal_string \"Yash\""
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9c551956ead7475f261dab898a6733eb51b8cdb3742cfed581cee8825fd67ba2",
+                          "typeString": "literal_string \"8920958278\""
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_30499df5168e9b895742a50f8a15ef04798616f6be939f8ddcd105e83da76f69",
+                          "typeString": "literal_string \"H2SO4\""
+                        }
+                      ],
+                      "id": 44,
+                      "name": "createRecord",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "531:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory,string memory,string memory)"
+                      }
+                    },
+                    "id": 48,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "531:43:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 49,
+                  "nodeType": "ExpressionStatement",
+                  "src": "531:43:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 51,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "508:2:0"
+            },
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "518:0:0"
+            },
+            "scope": 52,
+            "src": "497:85:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 53,
+        "src": "27:558:0"
+      }
+    ],
+    "src": "0:585:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/yash/Documents/ReAcid2/contracts/AddRecord.sol",
+    "exportedSymbols": {
+      "AddRecord": [
+        52
+      ]
+    },
+    "id": 53,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 52,
+        "linearizedBaseContracts": [
+          52
+        ],
+        "name": "AddRecord",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "recordCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 52,
+            "src": "53:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "53:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "79:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "AddRecord.Record",
+            "id": 13,
+            "members": [
+              {
+                "constant": false,
+                "id": 6,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "116:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "116:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 8,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "134:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "134:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "phoneNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "156:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "156:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "typeOfAcid",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "185:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "185:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Record",
+            "nodeType": "StructDefinition",
+            "scope": 52,
+            "src": "89:121:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17,
+            "name": "records",
+            "nodeType": "VariableDeclaration",
+            "scope": 52,
+            "src": "218:38:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Record_$13_storage_$",
+              "typeString": "mapping(uint256 => struct AddRecord.Record)"
+            },
+            "typeName": {
+              "id": 16,
+              "keyType": {
+                "id": 14,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "226:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "218:23:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Record_$13_storage_$",
+                "typeString": "mapping(uint256 => struct AddRecord.Record)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 15,
+                "name": "Record",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 13,
+                "src": "234:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Record_$13_storage_ptr",
+                  "typeString": "struct AddRecord.Record"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "370:119:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "381:13:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 26,
+                      "name": "recordCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "381:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "381:13:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 29,
+                        "name": "records",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "405:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Record_$13_storage_$",
+                          "typeString": "mapping(uint256 => struct AddRecord.Record storage ref)"
+                        }
+                      },
+                      "id": 31,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 30,
+                        "name": "recordCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "413:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "405:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Record_$13_storage",
+                        "typeString": "struct AddRecord.Record storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 33,
+                          "name": "recordCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4,
+                          "src": "435:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 34,
+                          "name": "_name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 19,
+                          "src": "448:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 35,
+                          "name": "_phoneNumber",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "455:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 36,
+                          "name": "_typeOfAcid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 23,
+                          "src": "469:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 32,
+                        "name": "Record",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "428:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Record_$13_storage_ptr_$",
+                          "typeString": "type(struct AddRecord.Record storage pointer)"
+                        }
+                      },
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "428:53:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Record_$13_memory",
+                        "typeString": "struct AddRecord.Record memory"
+                      }
+                    },
+                    "src": "405:76:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Record_$13_storage",
+                      "typeString": "struct AddRecord.Record storage ref"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "405:76:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 41,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createRecord",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "287:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "_phoneNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "308:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "name": "_typeOfAcid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "336:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:76:0"
+            },
+            "returnParameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "370:0:0"
+            },
+            "scope": 52,
+            "src": "265:224:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 50,
+              "nodeType": "Block",
+              "src": "518:64:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "59617368",
+                        "id": 45,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "544:6:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_789ae3b91d0bd926557e33c124fc251d0b2fc46ddfd95cdc5e41a026dd1abba0",
+                          "typeString": "literal_string \"Yash\""
+                        },
+                        "value": "Yash"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "38393230393538323738",
+                        "id": 46,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "552:12:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9c551956ead7475f261dab898a6733eb51b8cdb3742cfed581cee8825fd67ba2",
+                          "typeString": "literal_string \"8920958278\""
+                        },
+                        "value": "8920958278"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4832534f34",
+                        "id": 47,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "566:7:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_30499df5168e9b895742a50f8a15ef04798616f6be939f8ddcd105e83da76f69",
+                          "typeString": "literal_string \"H2SO4\""
+                        },
+                        "value": "H2SO4"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_789ae3b91d0bd926557e33c124fc251d0b2fc46ddfd95cdc5e41a026dd1abba0",
+                          "typeString": "literal_string \"Yash\""
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9c551956ead7475f261dab898a6733eb51b8cdb3742cfed581cee8825fd67ba2",
+                          "typeString": "literal_string \"8920958278\""
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_30499df5168e9b895742a50f8a15ef04798616f6be939f8ddcd105e83da76f69",
+                          "typeString": "literal_string \"H2SO4\""
+                        }
+                      ],
+                      "id": 44,
+                      "name": "createRecord",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "531:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory,string memory,string memory)"
+                      }
+                    },
+                    "id": 48,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "531:43:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 49,
+                  "nodeType": "ExpressionStatement",
+                  "src": "531:43:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 51,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "508:2:0"
+            },
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "518:0:0"
+            },
+            "scope": 52,
+            "src": "497:85:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 53,
+        "src": "27:558:0"
+      }
+    ],
+    "src": "0:585:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xe319D5e32220cDFa39735aa130044c3a1f0B6247",
+      "transactionHash": "0x1515fb7d3dcb455f68e6c6163394f82e95df78e22b0c0810ef1af04927678638"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2020-01-25T08:58:43.962Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
